@@ -1,0 +1,59 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Singup from "./pages/Singup";
+import PatientHome from "./pages/PatientDeshboards/PatientHome";
+import Doctorhome from "./pages/DoctorDeshboard/Doctorhome";
+import Appointments from "./pages/DoctorDeshboard/Appointments";
+import PatientRecords from "./pages/DoctorDeshboard/PatientRecords";
+import DoctorProfile from "./pages/DoctorDeshboard/DoctorProfile";
+import AddDoctor from "./pages/Admin/AddDoctor";
+import MyApoitment from "./pages/PatientDeshboards/MyApoitment";
+import PatientProfile from "./pages/PatientDeshboards/PatientProfile";
+import DoctorDetails from "./pages/PatientDeshboards/DoctorDetails.";
+import AdminHome from "./pages/Admin/AdminHome";
+import AllDoctor from "./pages/Admin/AllDoctor";
+import PatientDetails from "./pages/DoctorDeshboard/patientDetails";
+import Paymentpage from "./pages/PatientDeshboards/Paymentpage";
+import PaymentSuccesspage from "./pages/PatientDeshboards/PaymentSuccesspage";
+import PaymentStripeCreate from "./pages/PatientDeshboards/PaymentStripeCreate";
+import EnerengecyContect from "./pages/PatientDeshboards/EnerengecyContect";
+import PaymentVoucher from "./pages/PatientDeshboards/PaymentVoucher";
+import MedicalStore from "./pages/PatientDeshboards/MedicalStore";
+import Settings from "./pages/DoctorDeshboard/Settings";
+
+const App = () => {
+
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/singup" element={<Singup />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/doctorhome" element={<Doctorhome />} />
+        <Route path="/patienthome" element={<PatientHome />} />
+        <Route path="/appointments" element={<Appointments />} />
+        <Route path="/patientrecords" element={<PatientRecords />} />
+        <Route path="/doctorprofile" element={<DoctorProfile />} />
+        <Route path="/adddoctor" element={<AddDoctor />} />
+        <Route path="/myapoitment" element={<MyApoitment />} />
+        <Route path="/patientprofile" element={<PatientProfile />} />
+        <Route path="/doctorDetails/:id" element={<DoctorDetails />} />
+        <Route path="/adminHome" element={<AdminHome />} />
+        <Route path="/alldoctor" element={<AllDoctor />} />
+        <Route path="/patientDetails/:id" element={<PatientDetails />} />
+        <Route path="/payment" element={<Paymentpage />} />
+        <Route path="/payment-success" element={<PaymentSuccesspage />} />
+        <Route path="/payment-stripe" element={<PaymentStripeCreate />} />
+        <Route path="/emergency" element={<EnerengecyContect />} />
+        <Route path="/payment-voucher" element={<PaymentVoucher />} />
+        <Route path="/medicalstore" element={<MedicalStore />} />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default App;
