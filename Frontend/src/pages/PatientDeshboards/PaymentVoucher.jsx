@@ -1,4 +1,3 @@
-git add .
 import React from "react";
 import PatientSidebar from "./patientSidebar";
 const PaymentVoucher = () => {

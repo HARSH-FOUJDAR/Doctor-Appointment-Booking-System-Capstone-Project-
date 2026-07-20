@@ -17,7 +17,7 @@ const MyAppointment = () => {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:5000/appoitmet/myappoitment/${patientId}`,
+        `https://doctor-apoitment-booking-system.onrender.com/appoitmet/myappoitment/${patientId}`,
         { headers: { Authorization: `Bearer ${token}` } },
       );
       setAppointments(res.data.appointments || []);
